@@ -1,6 +1,11 @@
 # Ayman Hamdi last edited : 10/11/2022
 class BusinessesController < ApplicationController
     before_action :authenticate_user!
+
+
+
+
+
     def show
         @business = Business.find(params[:id])
 
