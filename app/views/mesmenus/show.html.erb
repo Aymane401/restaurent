@@ -1,0 +1,16 @@
+<!--Ayman Hamdi last edited : 10/11/2022-->
+
+<h1> Bienvenue <%=  @user.prenom%> <h1>
+
+
+<%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+
+<ul>
+    <% @businesses.each do |business| %>
+        <ul>       
+         <li>
+          <%= link_to  business.name, "/mesmenus/#{business.id}" %></br> </br> 
+         </li>
+        </ul>
+    <% end %>
+</ul>

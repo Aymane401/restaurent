@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   root to:"accueil#show"
 
 
-  get '/businesses/:id', to: 'businesses#show'
+  get '/mesmenus/:id', to: 'mesmenus#mesmenus'
 
   get '/admin/businesses', to: 'admin/accueil#show'
+
+  get '/mesmenus', to: 'mesmenus#show'
 
 
 end

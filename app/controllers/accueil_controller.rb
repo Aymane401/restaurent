@@ -4,6 +4,7 @@ class AccueilController < ApplicationController
 
     def show
         @businesses =  current_user.businesses
+        @user = current_user
         respond_to do |format|
             format.html{render 'accueil/show'}
 
