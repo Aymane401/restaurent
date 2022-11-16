@@ -1,0 +1,23 @@
+<!--Ayman Hamdi last edited : 10/11/2022-->
+<h1> <%= @business.name %> </h1>
+
+
+<% @business.menus.each do |menu| %>
+    <h2><li  style="font-family:verdana"> <%= menu.title %>  </li> </h2>
+    <ul>  
+    <ul>   
+    <% menu.menus.each do |sous_menu| %>
+        <hr> <h2><li  style="font-family:verdana"> <%= sous_menu.title %>  </li> </h2>  
+        <ul>
+           <li> <b> Items:</b> </li> </br>
+           <ul>
+             <% sous_menu.items.each do |item| %>
+                 <li  style="font-family:verdana">  &nbsp;   <%= item.name%>   </li> &nbsp;
+             <% end %>
+           </ul>
+       </ul>
+     
+    <% end %>
+  </ul>
+  </ul> 
+<% end %>

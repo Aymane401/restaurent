@@ -1,0 +1,37 @@
+<!--Ayman Hamdi last edited : 10/11/2022-->
+<h1> Bienvenue à la liste de restaurents -Admin- <h1>
+
+<ul>
+    <% @businesses.each do |business| %>
+
+
+     
+        <h1> <%= business.name %> </h1>
+
+
+        <% business.menus.each do |menu| %>
+           
+            <ul> <ul> <ul>  
+            <h3><li  style="font-family:verdana; list-style-type:circle"> <%= menu.title %>  </li> </h3>
+            <ul>   
+            <% menu.menus.each do |sous_menu| %>
+                <hr> <h3><li  style="font-family:verdana; list-style-type:disc"> <%= sous_menu.title + " :" %>  </li> </h3>  
+                <ul>
+                   <ol>
+                     <% sous_menu.items.each do |item| %>
+                         <li  style="font-family:verdana; font-weight:normal">  &nbsp;   <%= item.name%>   </li> &nbsp;
+                     <% end %>
+                   </ol>
+               </ul>
+             
+            <% end %>
+          </ul>
+          </ul> </ul>
+          </ul> 
+     
+        <% end %>
+        
+    <% end %>
+</ul>
+
+

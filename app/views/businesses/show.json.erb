@@ -1,0 +1,2 @@
+<%= raw @business.to_json(include: {menus: {include: {menus:{ include: :items}}}}) %>
+

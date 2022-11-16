@@ -1,0 +1,1 @@
+<%= raw @business.as_json(include: {menus: {include: {menus:{ include: :items}}}}).to_xml %>
